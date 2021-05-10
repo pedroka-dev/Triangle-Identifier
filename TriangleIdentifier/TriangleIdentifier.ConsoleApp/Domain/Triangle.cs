@@ -11,6 +11,7 @@ namespace TriangleIdentifier.ConsoleApp.Domain
         private float sideX;
         private float sideY;
         private float sideZ;
+
         public Triangle(float sideX, float sideY, float sideZ)
         {
             this.sideX = sideX;
