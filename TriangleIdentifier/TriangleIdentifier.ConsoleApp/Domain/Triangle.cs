@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace TriangleIdentifier.ConsoleApp.Domain
 {
-    class Triangle
+    public class Triangle
     {
         private float sideX;
         private float sideY;
@@ -21,27 +16,27 @@ namespace TriangleIdentifier.ConsoleApp.Domain
 
         public string IdentifyTriangleType()
         {
-            if (!isValidTriangle())
+            if (!IsValidTriangle())
                 return "Invalid triangle";
-            else if (isEquilateral())
+            else if (IsEquilateral())
                 return "Equilateral";
-            else if (isIsoceles())
+            else if (IsIsoceles())
                 return "Isoceles";
             else
                 return "Escalene";
         }
 
-        private bool isValidTriangle()
+        private bool IsValidTriangle()
         {
             return sideX < sideY + sideZ && sideY < sideX + sideZ && sideZ < sideX + sideY;
         }
 
-        private bool isEquilateral()
+        private bool IsEquilateral()
         {
             return sideX == sideY && sideY == sideZ && sideX == sideZ;
         }
 
-        private bool isIsoceles()
+        private bool IsIsoceles()
         {
             return sideX == sideY || sideY == sideZ || sideX == sideZ;
         }
